@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#050d1a;color:#e8eef8;font-family:'Noto Sans TC',sans-serif;overflow-x:hidden;}
+@keyframes pulse2{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.6)}}
+@keyframes slideIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeSlide{from{opacity:0}to{opacity:1}}
+.anim{animation:slideIn .7s ease forwards;}
+.anim2{animation:slideIn .7s ease .15s both;}
+.anim3{animation:slideIn .7s ease .3s both;}
+.anim4{animation:slideIn .7s ease .45s both;}
+.anim5{animation:slideIn .7s ease .6s both;}
+input,select,textarea{-webkit-appearance:none;border-radius:0;font-family:'Noto Sans TC',sans-serif;}
+input::placeholder,textarea::placeholder{color:#3a5070;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#050d1a;}::-webkit-scrollbar-thumb{background:#1a3a6a;}
+.gt{background:linear-gradient(135deg,#dc3c28 0%,#ff6b3a 50%,#ff8c50 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.pcard{background:#071223;border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;overflow:hidden;transition:all .25s;position:relative;}
+.pcard:hover{background:#091830;border-color:#dc3c28;transform:translateY(-4px);box-shadow:0 12px 28px rgba(220,60,40,.15);}
+.pcard .topbar{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .38s;}
+.pcard:hover .topbar{transform:scaleX(1);}
+.pcard:hover .ptitle{background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.why{background:#050d1a;padding:40px 32px;transition:background .3s;position:relative;overflow:hidden;}
+.why:hover{background:#071223;}
+.why .wb{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.why:hover .wb{transform:scaleX(1);}
+.nav-link{color:#7a90b0;text-decoration:none;font-size:13px;padding:8px 14px;letter-spacing:1px;border-bottom:2px solid transparent;transition:color .2s;}
+.nav-link:hover{color:#fff;}
+.nav-link.active{color:#ff5c3a;border-bottom:2px solid #ff5c3a;font-weight:700;}
+.btn-primary{background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:14px 30px;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:1px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 24px rgba(220,60,40,.4);transition:opacity .2s,transform .15s;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;}
+.btn-primary:hover{opacity:.88;transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:#e8eef8;border:1px solid rgba(255,255,255,.18);padding:13px 30px;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:1px;display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,color .2s;}
+.btn-ghost:hover{border-color:#ff5c3a;color:#ff5c3a;}
+.tag{font-size:12px;color:#7a90b0;background:#050d1a;border:1px solid rgba(255,255,255,.07);padding:3px 9px;}
+</style>
+</head><body><nav style="position:sticky;top:0;z-index:100;background:rgba(5,13,26,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:64px;font-family:'Noto Sans TC',sans-serif;">
+  <div style="display:flex;align-items:center;gap:9px;">
+    <div style="width:30px;height:30px;background:linear-gradient(135deg,#dc3c28,#ff8c50);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;font-family:'Bebas Neue',sans-serif;letter-spacing:1px;">HW</div>
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:3px;color:#fff;">鴻瑋<span style="background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">光電</span></span>
+  </div>
+  <div style="display:flex;gap:6px;align-items:center;">
+    <a href="index.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:8px 14px;letter-spacing:1px;border-bottom:2px solid transparent;transition:all .2s;">首頁</a>
+    <a href="products.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:8px 14px;letter-spacing:1px;border-bottom:2px solid transparent;transition:all .2s;">產品目錄</a>
+    <a href="about.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:8px 14px;letter-spacing:1px;border-bottom:2px solid transparent;transition:all .2s;">關於我們</a>
+    <a href="contact.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:8px 14px;letter-spacing:1px;border-bottom:2px solid transparent;transition:all .2s;">聯絡我們</a>
+    <a href="contact.html" style="background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:9px 20px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:1px;margin-left:8px;">立即詢價</a>
+  </div>
+</nav>
+<div style="background:#050d1a;padding:80px 5% 52px;border-bottom:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;"></div>
+  <div style="position:relative;z-index:2;" class="anim">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// CONTACT</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.8rem);font-weight:900;color:#fff;margin-bottom:12px;">聯絡<span class="gt">我們</span></h1>
+    <p style="font-size:15px;color:#7a90b0;max-width:480px;">填寫表單或直接撥打電話，我們將在最短時間內為您服務。</p>
+  </div>
+</div>
+
+<section style="background:#050d1a;padding:56px 5% 72px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:start;">
+    <div class="anim">
+      <div style="margin-bottom:24px;">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:3px;margin-bottom:8px;">PHONE</div>
+        <a href="tel:0935249966" style="font-size:2.2rem;font-weight:900;text-decoration:none;display:block;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0935-249-966</a>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:3px;margin-bottom:8px;">COMPANY</div>
+        <span style="font-size:16px;color:#e8eef8;font-weight:500;">鴻瑋光電有限公司</span>
+      </div>
+      <div style="background:#091830;border:1px solid rgba(255,255,255,.07);padding:20px 22px;margin-bottom:24px;position:relative;">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:3px;margin-bottom:10px;">BUSINESS HOURS</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;flex-shrink:0;animation:pulse2 2s infinite;"></div>
+          <span style="font-size:16px;font-weight:700;color:#fff;">週一～週六　09:00–18:00</span>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:1px;padding-left:18px;">週日及國定假日休息</div>
+      </div>
+      <a href="tel:0935249966" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:#091830;border:1px solid rgba(255,255,255,.07);text-decoration:none;color:#fff;transition:all .22s;margin-bottom:10px;" onmouseover="this.style.borderColor='#ff5c3a';this.style.background='#071223'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='#091830'"><div style="width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#ff5c3a;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div><div><strong style="display:block;font-size:15px;font-weight:700;margin-bottom:2px;">立即撥打電話</strong><span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;">0935-249-966</span></div></a><a href="https://line.me/ti/p/+886935249966" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:#091830;border:1px solid rgba(255,255,255,.07);text-decoration:none;color:#fff;transition:all .22s;margin-bottom:10px;" onmouseover="this.style.borderColor='#ff5c3a';this.style.background='#071223'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='#091830'"><div style="width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#06C755;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.418 14.024 24 12.304 24 10.304z"/></svg></div><div><strong style="display:block;font-size:15px;font-weight:700;margin-bottom:2px;">LINE 直接詢問</strong><span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;">+886 935-249-966</span></div></a><a href="https://www.facebook.com/share/18PykxSWuE/" target="_blank" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:#091830;border:1px solid rgba(255,255,255,.07);text-decoration:none;color:#fff;transition:all .22s;margin-bottom:10px;" onmouseover="this.style.borderColor='#ff5c3a';this.style.background='#071223'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='#091830'"><div style="width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:#0c2040;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#1877F2;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div><div><strong style="display:block;font-size:15px;font-weight:700;margin-bottom:2px;">Facebook Messenger</strong><span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;">鴻瑋光電有限公司</span></div></a>
+    </div>
+
+    <div class="anim2" style="background:#071223;border:1px solid rgba(255,255,255,.07);padding:36px 32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
+      <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px;">
+        <div style="width:4px;height:18px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
+        索取設備報價單
+      </div>
+      <div id="form-wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+          <div><label style="display:block;font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:7px;">姓名 *</label>
+          <input id="f-name" placeholder="您的姓名" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.07);color:#fff;padding:12px 14px;font-size:15px;outline:none;" onfocus="this.style.borderColor='#ff5c3a'" onblur="this.style.borderColor='rgba(255,255,255,.07)'"/></div>
+          <div><label style="display:block;font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:7px;">電話 *</label>
+          <input id="f-phone" placeholder="聯絡電話" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.07);color:#fff;padding:12px 14px;font-size:15px;outline:none;" onfocus="this.style.borderColor='#ff5c3a'" onblur="this.style.borderColor='rgba(255,255,255,.07)'"/></div>
+        </div>
+        <div style="margin-bottom:12px;"><label style="display:block;font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:7px;">公司名稱</label>
+        <input id="f-co" placeholder="公司／工廠（選填）" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.07);color:#fff;padding:12px 14px;font-size:15px;outline:none;" onfocus="this.style.borderColor='#ff5c3a'" onblur="this.style.borderColor='rgba(255,255,255,.07)'"/></div>
+        <div style="margin-bottom:12px;"><label style="display:block;font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:7px;">感興趣設備</label>
+        <input id="f-item" placeholder="例如：HA-1530（選填）" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.07);color:#fff;padding:12px 14px;font-size:15px;outline:none;" onfocus="this.style.borderColor='#ff5c3a'" onblur="this.style.borderColor='rgba(255,255,255,.07)'"/></div>
+        <div style="margin-bottom:20px;"><label style="display:block;font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:7px;">需求說明</label>
+        <textarea id="f-msg" placeholder="請描述加工需求、材料種類等（選填）" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.07);color:#fff;padding:12px 14px;font-size:15px;outline:none;height:90px;resize:vertical;" onfocus="this.style.borderColor='#ff5c3a'" onblur="this.style.borderColor='rgba(255,255,255,.07)'"></textarea></div>
+        <button id="submit-btn" onclick="submitForm()" style="width:100%;background:#06C755;color:#fff;border:none;padding:16px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Noto Sans TC',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 20px rgba(6,199,85,.3);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" stroke="none"/></svg> 送出並開啟 LINE 詢問
+        </button>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;text-align:center;margin-top:10px;letter-spacing:1px;">週一至週六 09:00–18:00 快速回覆</div>
+      </div>
+      <div id="sent-wrap" style="display:none;text-align:center;padding:36px 0;">
+        <div style="margin-bottom:12px;display:flex;justify-content:center;"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="#22c55e" stroke-width="2" fill="rgba(34,197,94,.1)"/><path d="M14 26l9 9 16-16" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div style="font-size:16px;font-weight:700;margin-bottom:8px;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">已開啟 LINE 對話！</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;margin-bottom:12px;">LINE 已開啟</div><div id="copied-msg" style="display:none;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;padding:10px 16px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:13px;color:#22c55e;font-family:monospace;">訊息已複製到剪貼簿，請在 LINE 貼上傳送</span></div>
+        <a href="https://line.me/ti/p/+886935249966" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:10px 22px;text-decoration:none;font-size:15px;font-weight:700;">重新開啟 LINE</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer style="background:#071223;border-top:1px solid rgba(255,255,255,0.07);padding:28px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:'Noto Sans TC',sans-serif;">
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;color:#3a5070;">鴻瑋<span style="background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">光電</span></div>
+  <div style="font-size:13px;color:#3a5070;font-family:monospace;letter-spacing:1px;">© 2025 鴻瑋光電有限公司 · 0935-249-966</div>
+  <div style="display:flex;gap:20px;">
+    <a href="index.html" style="font-size:13px;color:#3a5070;text-decoration:none;font-family:monospace;letter-spacing:1px;">首頁</a>
+    <a href="products.html" style="font-size:13px;color:#3a5070;text-decoration:none;font-family:monospace;letter-spacing:1px;">產品</a>
+    <a href="about.html" style="font-size:13px;color:#3a5070;text-decoration:none;font-family:monospace;letter-spacing:1px;">關於</a>
+    <a href="contact.html" style="font-size:13px;color:#3a5070;text-decoration:none;font-family:monospace;letter-spacing:1px;">聯絡</a>
+  </div>
+</footer>
+<script>
+function submitForm(){
+  const name  = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const co    = document.getElementById('f-co').value.trim();
+  const item  = document.getElementById('f-item').value.trim();
+  const msg   = document.getElementById('f-msg').value.trim();
+
+  // Validation
+  const nameErr  = document.getElementById('err-name');
+  const phoneErr = document.getElementById('err-phone');
+  nameErr.style.display  = name  ? 'none' : 'flex';
+  phoneErr.style.display = phone ? 'none' : 'flex';
+  if (!name || !phone) return;
+
+  // Build LINE message
+  const lines = [
+    '【鴻瑋光電 報價詢問】',
+    '姓名：' + name,
+    '電話：' + phone,
+    co   ? '公司：' + co   : '',
+    item ? '設備：' + item : '',
+    msg  ? '\n需求說明：\n' + msg : '',
+  ].filter(Boolean).join('\n');
+
+  // Step 1: copy to clipboard
+  const copyDone = navigator.clipboard
+    ? navigator.clipboard.writeText(lines)
+    : Promise.resolve();
+
+  // Step 2: show progress, open LINE
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 開啟 LINE 中...';
+
+  copyDone.finally(() => {
+    // Build LINE URL with pre-filled text (works on mobile LINE app)
+    const lineText = encodeURIComponent(lines);
+    const lineUrl  = 'https://line.me/ti/p/+886935249966?openExternalBrowser=1';
+    window.open(lineUrl, '_blank');
+
+    setTimeout(() => {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('sent-wrap').style.display = 'block';
+      // Show copied message
+      document.getElementById('copied-msg').style.display = 'flex';
+    }, 600);
+  });
+}
+</script>
+</body></html>
