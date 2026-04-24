@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="page-title">部落格 | 鴻瑋光電有限公司</title>
+<meta name="description" id="page-desc" content="鴻瑋光電部落格 — 雷射設備知識、選購指南、加工技巧">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#050d1a;color:#e8eef8;font-family:'Noto Sans TC',sans-serif;overflow-x:hidden;}
+@keyframes pulse2{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.gt{background:linear-gradient(135deg,#dc3c28,#ff6b3a,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.btn-primary{background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:12px 26px;text-decoration:none;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;box-shadow:0 4px 20px rgba(220,60,40,.4);transition:opacity .2s,transform .2s;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;}
+.btn-primary:hover{opacity:.88;transform:translateY(-2px);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#050d1a;}::-webkit-scrollbar-thumb{background:#1a3a6a;border-radius:4px;}
+img{display:block;}
+/* Blog article typography */
+.blog-content h2{font-size:1.45rem;font-weight:700;color:#fff;margin:36px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07);}
+.blog-content h3{font-size:1.1rem;font-weight:700;color:#e8eef8;margin:26px 0 10px;}
+.blog-content p{font-size:15px;color:#a0b4cc;line-height:1.95;margin-bottom:18px;}
+.blog-content ul,.blog-content ol{padding-left:22px;margin-bottom:18px;}
+.blog-content li{font-size:15px;color:#a0b4cc;line-height:1.85;margin-bottom:8px;}
+.blog-content strong{color:#e8eef8;font-weight:700;}
+.blog-content .callout{background:#071223;border-left:3px solid #dc3c28;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;}
+.blog-content .callout p{margin:0;color:#c8d8e8;}
+.blog-content table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.blog-content th{background:#071223;color:#ff5c3a;padding:12px 16px;text-align:left;border:1px solid rgba(255,255,255,.08);font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:1px;}
+.blog-content td{padding:11px 16px;border:1px solid rgba(255,255,255,.06);color:#a0b4cc;vertical-align:top;}
+.blog-content td:first-child{color:#e8eef8;font-weight:500;}
+.blog-content tr:hover td{background:rgba(255,255,255,.02);}
+.tag-pill{font-size:11px;color:#ff5c3a;background:rgba(220,60,40,.1);border:1px solid rgba(220,60,40,.25);padding:4px 12px;border-radius:20px;letter-spacing:1px;display:inline-block;margin:3px;}
+.related-card{display:block;background:#071223;border:1px solid rgba(255,255,255,.07);padding:16px;border-radius:8px;text-decoration:none;color:#e8eef8;margin-bottom:10px;transition:border-color .2s,transform .2s;cursor:pointer;}
+.related-card:hover{border-color:rgba(220,60,40,.5);transform:translateX(4px);}
+/* Blog listing cards */
+.blog-list-card{background:#071223;border:1px solid rgba(255,255,255,.07);padding:28px;border-radius:12px;cursor:pointer;transition:all .3s;}
+.blog-list-card:hover{border-color:rgba(220,60,40,.5);transform:translateY(-4px);box-shadow:0 16px 40px rgba(220,60,40,.12);}
+@media(max-width:768px){
+  .footer-grid{grid-template-columns:1fr!important;}
+  .blog-layout{grid-template-columns:1fr!important;}
+  .blog-aside{display:none!important;}
+  .blog-list-grid{grid-template-columns:1fr!important;}
+  [style*="padding:80px 5%"]{padding:56px 6%!important;}
+  [style*="padding:64px 5%"]{padding:48px 6%!important;}
+}
+</style>
+</head>
+<body>
+<div class="page-content" style="padding-top:68px;">
+
+  <!-- Page shown by JS based on ?id= param -->
+  <div id="blog-detail" style="display:none;">
+    <!-- Hero header -->
+    <div id="detail-header" style="background:#050d1a;padding:80px 5% 52px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+      <div style="position:absolute;top:-20%;right:-5%;width:50%;height:120%;background:radial-gradient(ellipse,rgba(220,60,40,.07) 0%,transparent 70%);pointer-events:none;"></div>
+      <div style="position:relative;z-index:2;max-width:760px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3a5070;margin-bottom:20px;flex-wrap:wrap;">
+          <a href="index.html" style="color:#3a5070;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#ff5c3a'" onmouseout="this.style.color='#3a5070'">首頁</a>
+          <span>›</span>
+          <a href="blog.html" style="color:#3a5070;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#ff5c3a'" onmouseout="this.style.color='#3a5070'">部落格</a>
+          <span>›</span>
+          <span id="crumb-cat" style="color:#7a90b0;"></span>
+        </div>
+        <div id="detail-meta" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:4px;margin-bottom:12px;"></div>
+        <h1 id="detail-title" style="font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px;animation:slideUp .7s cubic-bezier(.22,1,.36,1) both;"></h1>
+        <p id="detail-desc" style="font-size:15px;color:#7a90b0;line-height:1.8;margin-bottom:20px;animation:slideUp .7s cubic-bezier(.22,1,.36,1) .15s both;"></p>
+        <div id="detail-tags"></div>
+      </div>
+    </div>
+
+    <!-- Article body -->
+    <section style="padding:64px 5%;max-width:1200px;margin:0 auto;">
+      <div class="blog-layout" style="display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;">
+        <article class="blog-content">
+          <div id="detail-body"></div>
+          <!-- CTA -->
+          <div style="margin-top:48px;background:linear-gradient(135deg,rgba(220,60,40,.12),rgba(220,60,40,.05));border:1px solid rgba(220,60,40,.3);border-radius:12px;padding:32px;">
+            <div style="font-size:11px;color:#ff5c3a;font-family:'Share Tech Mono',monospace;letter-spacing:3px;margin-bottom:10px;">// 有設備需求？</div>
+            <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;">立即聯繫鴻瑋光電</h3>
+            <p style="font-size:14px;color:#7a90b0;margin-bottom:20px;">專業業務直接對接，週一至週五 09:00–18:00 快速回覆報價。</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="contact.html" class="btn-primary">索取報價 →</a>
+              <a href="https://line.me/ti/p/+886935249966?openExternalBrowser=1" target="_blank"
+                style="background:#06C755;color:#fff;padding:12px 24px;text-decoration:none;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.418 14.024 24 12.304 24 10.304z"/></svg>
+                LINE 詢問
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="blog-aside" style="position:sticky;top:88px;">
+          <div style="background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:24px;margin-bottom:20px;">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:3px;margin-bottom:16px;">相關文章</div>
+            <div id="related-list"></div>
+          </div>
+          <div style="background:#071223;border:1px solid rgba(220,60,40,.3);border-radius:12px;padding:24px;">
+            <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">需要專業建議？</div>
+            <div style="font-size:13px;color:#7a90b0;margin-bottom:16px;line-height:1.7;">鴻瑋光電免費選機諮詢<br>週一至週五 09:00–18:00</div>
+            <a href="tel:0935249966" style="display:block;font-size:20px;font-weight:900;text-decoration:none;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;">0935-249-966</a>
+            <a href="https://line.me/ti/p/+886935249966?openExternalBrowser=1" target="_blank"
+              style="display:block;background:#06C755;color:#fff;padding:10px;text-align:center;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">LINE 立即詢問</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <!-- Blog listing (shown when no ?id param) -->
+  <div id="blog-listing" style="display:none;">
+    <div style="background:#050d1a;padding:80px 5% 52px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+      <div style="position:relative;z-index:2;">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// BLOG</div>
+        <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;margin-bottom:12px;">雷射設備<span class="gt">知識部落格</span></h1>
+        <p style="font-size:15px;color:#7a90b0;max-width:520px;">選機指南、加工技巧、設備知識，協助您做出最正確的採購決策。</p>
+      </div>
+    </div>
+    <div style="padding:64px 5%;max-width:1000px;margin:0 auto;">
+      <div id="blog-list-grid" class="blog-list-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;"></div>
+    </div>
+  </div>
+
+</div>
+
+const BLOG_DATA = {
+  "1": {{
+    "title": "光纖雷射打標機選購完整指南",
+    "cat": "雷射打標機",
+    "date": "2026年4月",
+    "tags": [
+      "光纖雷射打標機",
+      "雷射打標",
+      "Fiber Laser",
+      "打標機選購"
+    ],
+    "desc": "光纖雷射打標機以高效率、免維護、壽命長等特點廣泛應用於五金、電子、汽配等產業。本文完整說明選購關鍵規格與注意事項。",
+    "content": "\n<h2>什麼是光纖雷射打標機？</h2>\n<p>光纖雷射打標機（Fiber Laser Marker）是使用光纖雷射源進行表面雕刻與永久打標的設備。與傳統 CO₂ 或 YAG 雷射相比，光纖雷射具有電光轉換效率高（可達 30% 以上）、無耗材、免維護等核心優勢，廣泛應用於各類金屬及部分非金屬材料的序號、條碼、LOGO 永久打標。</p>\n<div class=\"callout\"><p>光纖雷射壽命長達 <strong>10 萬小時</strong>，相比半導體（YAG）雷射的 1 萬小時，是更適合量產環境的長期投資。</p></div>\n<h2>光纖雷射打標機適用材料</h2>\n<p>光纖雷射波長約 1064nm，對金屬材料的吸收率極高，適用於：</p>\n<ul>\n  <li><strong>不鏽鋼</strong>：食品器具、醫療器械序號</li>\n  <li><strong>鋁材</strong>：3C 產品外殼、工業零件</li>\n  <li><strong>碳鋼、鍍鋅板</strong>：五金工具序號</li>\n  <li><strong>銅、黃銅</strong>：電子連接器、精密零件</li>\n  <li><strong>IC / PCB 電路板</strong>：電子製造追溯</li>\n  <li><strong>工程塑膠（ABS、PA）</strong>：汽車零件標示</li>\n</ul>\n<h2>選購關鍵規格詳解</h2>\n<h3>1. 雷射功率（W）</h3>\n<p>功率越高，打標速度越快，也能處理更硬的材料。</p>\n<table>\n  <tr><th>功率</th><th>適用場景</th><th>建議用途</th></tr>\n  <tr><td>20W</td><td>輕薄金屬、塑膠</td><td>小批量精細打標</td></tr>\n  <tr><td>30W</td><td>一般金屬零件</td><td>中量生產線</td></tr>\n  <tr><td>50W</td><td>厚實金屬、深雕</td><td>高速大量生產</td></tr>\n</table>\n<h3>2. 打標速度與重複精度</h3>\n<p>打標速度通常可達 7,000～8,000 mm/s。重複精度影響每個產品打標位置的一致性，高品質機型精度可達 <strong>±0.002mm</strong>，適合 IC 及電子零件等高精度需求。</p>\n<h3>3. 振鏡系統品質</h3>\n<p>振鏡（Galvanometer）決定打標路徑的速度與精確度。建議選用進口振鏡，確保長期穩定性。</p>\n<div class=\"callout\"><p><strong>鴻瑋建議：</strong>選購前務必確認材料種類、批量大小與打標內容，再決定功率與配置，避免過度投資或效能不足。</p></div>\n<h2>售後服務與保固</h2>\n<p>光纖雷射打標機雖然免維護，但定期清潔聚焦鏡片仍是維持品質的關鍵。鴻瑋光電提供全台到府安裝、操作教育訓練、一年保固及零配件現貨供應。</p>",
+    "related_ids": [
+      "2",
+      "3"
+    ]
+  }},
+  "2": {{
+    "title": "CNC 雕刻機加工材料完整對照表",
+    "cat": "CNC 雕刻機",
+    "date": "2026年4月",
+    "tags": [
+      "CNC雕刻機",
+      "CNC加工",
+      "非金屬切割",
+      "加工材料"
+    ],
+    "desc": "CNC 雕刻機可加工木材、壓克力、密集板等多種非金屬材料。本文整理各機型對應材料與加工參數，協助快速選機。",
+    "content": "\n<h2>CNC 雕刻機能加工哪些材料？</h2>\n<p>CNC 雕刻機（Computer Numerical Control Engraving Machine）透過主軸旋轉刀具進行切削加工，可處理多種非金屬材料，部分高功率機型也能加工軟金屬（如鋁材）。</p>\n<h2>主要加工材料對照表</h2>\n<table>\n  <tr><th>材料</th><th>建議主軸功率</th><th>推薦機型</th><th>常見用途</th></tr>\n  <tr><td>木材（實木/夾板）</td><td>2.2KW～6KW</td><td>HC-1325 / HA-1530</td><td>家具、木門、藝術品</td></tr>\n  <tr><td>密集板（MDF）</td><td>2.2KW～4.5KW</td><td>HC-1325 / HC-1224</td><td>系統家具、展示架</td></tr>\n  <tr><td>壓克力</td><td>1.5KW～3.5KW</td><td>HC-0609 / HC-1224</td><td>燈箱字、展示品</td></tr>\n  <tr><td>PVC 發泡板</td><td>1.5KW～3KW</td><td>HC-1325 / HA-1530</td><td>廣告看板、展場佈置</td></tr>\n  <tr><td>泡棉 / EVA</td><td>1.5KW 以下</td><td>HC-0609</td><td>包裝內襯、道具</td></tr>\n  <tr><td>鋁材（需特殊刀具）</td><td>6KW 以上</td><td>HA-1530 ATC</td><td>工業零件、模具</td></tr>\n</table>\n<h2>自動換刀（ATC）機型的優勢</h2>\n<p>若加工流程需要多種刀具切換，配備自動換刀系統（ATC）的機型如 <strong>HA-1530</strong> 可大幅減少人工停機時間，適合批量生產環境。</p>\n<div class=\"callout\"><p>木工家具廠建議選擇 4 刀位以上的 ATC 機型，搭配 6KW 主軸，可同時完成開料、鑽孔、造型銑削等多道工序。</p></div>\n<h2>加工參數設定重點</h2>\n<h3>切削速度（Feed Rate）</h3>\n<p>木材一般可設定 15,000～20,000 mm/min，壓克力則建議降至 10,000 mm/min 以下，避免產生熔融邊緣。</p>\n<h3>主軸轉速（RPM）</h3>\n<p>壓克力等熱敏感材料需較高轉速（18,000～24,000 RPM）配合較慢進給，才能得到光滑的切割邊緣。</p>\n<div class=\"callout\"><p><strong>鴻瑋建議：</strong>第一次操作新材料時，建議先以小區域試切，確認參數後再進行批量生產。</p></div>",
+    "related_ids": [
+      "1",
+      "3"
+    ]
+  }},
+  "3": {{
+    "title": "CO₂ 雷射切割機 vs 光纖雷射切割機：哪一種適合你？",
+    "cat": "雷射切割機",
+    "date": "2026年4月",
+    "tags": [
+      "雷射切割機",
+      "光纖雷射",
+      "CO₂雷射",
+      "選機指南"
+    ],
+    "desc": "CO₂ 雷射與光纖雷射是最主流的兩種雷射切割技術。本文一次說明兩者核心差異，幫你快速做出正確選擇。",
+    "content": "\n<h2>兩種技術的核心差異</h2>\n<p>雷射切割機市場上最常見的兩種技術是 <strong>CO₂ 雷射</strong>（波長 10.6μm）與<strong>光纖雷射</strong>（波長 1.06μm）。波長不同，決定了它們對不同材料的適用性有根本上的差異。</p>\n<h2>快速比較表</h2>\n<table>\n  <tr><th>比較項目</th><th>CO₂ 雷射切割機</th><th>光纖雷射切割機</th></tr>\n  <tr><td>波長</td><td>10.6 μm</td><td>1.06 μm</td></tr>\n  <tr><td>適用材料</td><td>壓克力、木材、皮革、布料</td><td>碳鋼、不鏽鋼、鋁材、銅材</td></tr>\n  <tr><td>切割金屬</td><td>需特殊配置，效率較低</td><td>專為金屬設計，效率極高</td></tr>\n  <tr><td>電耗</td><td>較高（約 10-15KW）</td><td>較低（約 3-8KW）</td></tr>\n  <tr><td>維護需求</td><td>需定期更換雷射管</td><td>免維護，壽命 10 萬小時</td></tr>\n  <tr><td>設備價格</td><td>相對較低</td><td>相對較高</td></tr>\n</table>\n<h2>CO₂ 雷射適合哪些產業？</h2>\n<ul>\n  <li><strong>廣告招牌業</strong>：壓克力燈箱字、PVC 看板</li>\n  <li><strong>禮品業</strong>：木質禮品雕刻、皮革壓紋</li>\n  <li><strong>包裝業</strong>：紙板、泡棉、不織布切割</li>\n  <li><strong>服裝業</strong>：布料、蕾絲精密切割</li>\n</ul>\n<h2>光纖雷射適合哪些產業？</h2>\n<ul>\n  <li><strong>五金鈑金業</strong>：碳鋼、不鏽鋼板材精密切割</li>\n  <li><strong>汽車零件</strong>：金屬底盤件、車身結構件</li>\n  <li><strong>電子業</strong>：鋁製散熱片、導電片</li>\n  <li><strong>建築裝飾</strong>：不鏽鋼花格、裝飾板</li>\n</ul>\n<div class=\"callout\"><p><strong>混合需求怎麼辦？</strong>鴻瑋光電的 <strong>HS-1530</strong> CO₂ 金屬非金屬兩用機是最佳解決方案，搭配 Rofin 200～600W 雷射管，一機多用。</p></div>\n<h2>購機決策建議</h2>\n<p><strong>選 CO₂ 雷射</strong>，如果主要加工壓克力、木材、皮革等非金屬材料，預算相對有限。</p>\n<p><strong>選光纖雷射</strong>，如果主要切割不鏽鋼、碳鋼等金屬板材，重視電耗成本，或規劃長期高產量的金屬加工業務。</p>\n<div class=\"callout\"><p><strong>免費選機諮詢：</strong>不確定哪種適合您？歡迎 LINE 或電話聯繫鴻瑋光電，說明您的材料、批量與預算，我們提供專業建議。</p></div>",
+    "related_ids": [
+      "1",
+      "2"
+    ]
+  }}
+};
+
+<script>
+const BLOG_DATA = {
+  "1": {
+    "title": "光纖雷射打標機選購完整指南",
+    "cat": "雷射打標機",
+    "date": "2026年4月",
+    "tags": [
+      "光纖雷射打標機",
+      "雷射打標",
+      "Fiber Laser",
+      "打標機選購"
+    ],
+    "desc": "光纖雷射打標機以高效率、免維護、壽命長等特點廣泛應用於五金、電子、汽配等產業。本文完整說明選購關鍵規格與注意事項。",
+    "content": "\n<h2>什麼是光纖雷射打標機？</h2>\n<p>光纖雷射打標機（Fiber Laser Marker）是使用光纖雷射源進行表面雕刻與永久打標的設備。與傳統 CO₂ 或 YAG 雷射相比，光纖雷射具有電光轉換效率高（可達 30% 以上）、無耗材、免維護等核心優勢，廣泛應用於各類金屬及部分非金屬材料的序號、條碼、LOGO 永久打標。</p>\n<div class=\"callout\"><p>光纖雷射壽命長達 <strong>10 萬小時</strong>，相比半導體（YAG）雷射的 1 萬小時，是更適合量產環境的長期投資。</p></div>\n<h2>光纖雷射打標機適用材料</h2>\n<p>光纖雷射波長約 1064nm，對金屬材料的吸收率極高，適用於：</p>\n<ul>\n  <li><strong>不鏽鋼</strong>：食品器具、醫療器械序號</li>\n  <li><strong>鋁材</strong>：3C 產品外殼、工業零件</li>\n  <li><strong>碳鋼、鍍鋅板</strong>：五金工具序號</li>\n  <li><strong>銅、黃銅</strong>：電子連接器、精密零件</li>\n  <li><strong>IC / PCB 電路板</strong>：電子製造追溯</li>\n  <li><strong>工程塑膠（ABS、PA）</strong>：汽車零件標示</li>\n</ul>\n<h2>選購關鍵規格詳解</h2>\n<h3>1. 雷射功率（W）</h3>\n<p>功率越高，打標速度越快，也能處理更硬的材料。</p>\n<table>\n  <tr><th>功率</th><th>適用場景</th><th>建議用途</th></tr>\n  <tr><td>20W</td><td>輕薄金屬、塑膠</td><td>小批量精細打標</td></tr>\n  <tr><td>30W</td><td>一般金屬零件</td><td>中量生產線</td></tr>\n  <tr><td>50W</td><td>厚實金屬、深雕</td><td>高速大量生產</td></tr>\n</table>\n<h3>2. 打標速度與重複精度</h3>\n<p>打標速度通常可達 7,000～8,000 mm/s。重複精度影響每個產品打標位置的一致性，高品質機型精度可達 <strong>±0.002mm</strong>，適合 IC 及電子零件等高精度需求。</p>\n<h3>3. 振鏡系統品質</h3>\n<p>振鏡（Galvanometer）決定打標路徑的速度與精確度。建議選用進口振鏡，確保長期穩定性。</p>\n<div class=\"callout\"><p><strong>鴻瑋建議：</strong>選購前務必確認材料種類、批量大小與打標內容，再決定功率與配置，避免過度投資或效能不足。</p></div>\n<h2>售後服務與保固</h2>\n<p>光纖雷射打標機雖然免維護，但定期清潔聚焦鏡片仍是維持品質的關鍵。鴻瑋光電提供全台到府安裝、操作教育訓練、一年保固及零配件現貨供應。</p>",
+    "related_ids": [
+      "2",
+      "3"
+    ]
+  },
+  "2": {
+    "title": "CNC 雕刻機加工材料完整對照表",
+    "cat": "CNC 雕刻機",
+    "date": "2026年4月",
+    "tags": [
+      "CNC雕刻機",
+      "CNC加工",
+      "非金屬切割",
+      "加工材料"
+    ],
+    "desc": "CNC 雕刻機可加工木材、壓克力、密集板等多種非金屬材料。本文整理各機型對應材料與加工參數，協助快速選機。",
+    "content": "\n<h2>CNC 雕刻機能加工哪些材料？</h2>\n<p>CNC 雕刻機（Computer Numerical Control Engraving Machine）透過主軸旋轉刀具進行切削加工，可處理多種非金屬材料，部分高功率機型也能加工軟金屬（如鋁材）。</p>\n<h2>主要加工材料對照表</h2>\n<table>\n  <tr><th>材料</th><th>建議主軸功率</th><th>推薦機型</th><th>常見用途</th></tr>\n  <tr><td>木材（實木/夾板）</td><td>2.2KW～6KW</td><td>HC-1325 / HA-1530</td><td>家具、木門、藝術品</td></tr>\n  <tr><td>密集板（MDF）</td><td>2.2KW～4.5KW</td><td>HC-1325 / HC-1224</td><td>系統家具、展示架</td></tr>\n  <tr><td>壓克力</td><td>1.5KW～3.5KW</td><td>HC-0609 / HC-1224</td><td>燈箱字、展示品</td></tr>\n  <tr><td>PVC 發泡板</td><td>1.5KW～3KW</td><td>HC-1325 / HA-1530</td><td>廣告看板、展場佈置</td></tr>\n  <tr><td>泡棉 / EVA</td><td>1.5KW 以下</td><td>HC-0609</td><td>包裝內襯、道具</td></tr>\n  <tr><td>鋁材（需特殊刀具）</td><td>6KW 以上</td><td>HA-1530 ATC</td><td>工業零件、模具</td></tr>\n</table>\n<h2>自動換刀（ATC）機型的優勢</h2>\n<p>若加工流程需要多種刀具切換，配備自動換刀系統（ATC）的機型如 <strong>HA-1530</strong> 可大幅減少人工停機時間，適合批量生產環境。</p>\n<div class=\"callout\"><p>木工家具廠建議選擇 4 刀位以上的 ATC 機型，搭配 6KW 主軸，可同時完成開料、鑽孔、造型銑削等多道工序。</p></div>\n<h2>加工參數設定重點</h2>\n<h3>切削速度（Feed Rate）</h3>\n<p>木材一般可設定 15,000～20,000 mm/min，壓克力則建議降至 10,000 mm/min 以下，避免產生熔融邊緣。</p>\n<h3>主軸轉速（RPM）</h3>\n<p>壓克力等熱敏感材料需較高轉速（18,000～24,000 RPM）配合較慢進給，才能得到光滑的切割邊緣。</p>\n<div class=\"callout\"><p><strong>鴻瑋建議：</strong>第一次操作新材料時，建議先以小區域試切，確認參數後再進行批量生產。</p></div>",
+    "related_ids": [
+      "1",
+      "3"
+    ]
+  },
+  "3": {
+    "title": "CO₂ 雷射切割機 vs 光纖雷射切割機：哪一種適合你？",
+    "cat": "雷射切割機",
+    "date": "2026年4月",
+    "tags": [
+      "雷射切割機",
+      "光纖雷射",
+      "CO₂雷射",
+      "選機指南"
+    ],
+    "desc": "CO₂ 雷射與光纖雷射是最主流的兩種雷射切割技術。本文一次說明兩者核心差異，幫你快速做出正確選擇。",
+    "content": "\n<h2>兩種技術的核心差異</h2>\n<p>雷射切割機市場上最常見的兩種技術是 <strong>CO₂ 雷射</strong>（波長 10.6μm）與<strong>光纖雷射</strong>（波長 1.06μm）。波長不同，決定了它們對不同材料的適用性有根本上的差異。</p>\n<h2>快速比較表</h2>\n<table>\n  <tr><th>比較項目</th><th>CO₂ 雷射切割機</th><th>光纖雷射切割機</th></tr>\n  <tr><td>波長</td><td>10.6 μm</td><td>1.06 μm</td></tr>\n  <tr><td>適用材料</td><td>壓克力、木材、皮革、布料</td><td>碳鋼、不鏽鋼、鋁材、銅材</td></tr>\n  <tr><td>切割金屬</td><td>需特殊配置，效率較低</td><td>專為金屬設計，效率極高</td></tr>\n  <tr><td>電耗</td><td>較高（約 10-15KW）</td><td>較低（約 3-8KW）</td></tr>\n  <tr><td>維護需求</td><td>需定期更換雷射管</td><td>免維護，壽命 10 萬小時</td></tr>\n  <tr><td>設備價格</td><td>相對較低</td><td>相對較高</td></tr>\n</table>\n<h2>CO₂ 雷射適合哪些產業？</h2>\n<ul>\n  <li><strong>廣告招牌業</strong>：壓克力燈箱字、PVC 看板</li>\n  <li><strong>禮品業</strong>：木質禮品雕刻、皮革壓紋</li>\n  <li><strong>包裝業</strong>：紙板、泡棉、不織布切割</li>\n  <li><strong>服裝業</strong>：布料、蕾絲精密切割</li>\n</ul>\n<h2>光纖雷射適合哪些產業？</h2>\n<ul>\n  <li><strong>五金鈑金業</strong>：碳鋼、不鏽鋼板材精密切割</li>\n  <li><strong>汽車零件</strong>：金屬底盤件、車身結構件</li>\n  <li><strong>電子業</strong>：鋁製散熱片、導電片</li>\n  <li><strong>建築裝飾</strong>：不鏽鋼花格、裝飾板</li>\n</ul>\n<div class=\"callout\"><p><strong>混合需求怎麼辦？</strong>鴻瑋光電的 <strong>HS-1530</strong> CO₂ 金屬非金屬兩用機是最佳解決方案，搭配 Rofin 200～600W 雷射管，一機多用。</p></div>\n<h2>購機決策建議</h2>\n<p><strong>選 CO₂ 雷射</strong>，如果主要加工壓克力、木材、皮革等非金屬材料，預算相對有限。</p>\n<p><strong>選光纖雷射</strong>，如果主要切割不鏽鋼、碳鋼等金屬板材，重視電耗成本，或規劃長期高產量的金屬加工業務。</p>\n<div class=\"callout\"><p><strong>免費選機諮詢：</strong>不確定哪種適合您？歡迎 LINE 或電話聯繫鴻瑋光電，說明您的材料、批量與預算，我們提供專業建議。</p></div>",
+    "related_ids": [
+      "1",
+      "2"
+    ]
+  }
+};
+
+const SVG_ARROW = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M7.5 3l4 4-4 4"/></svg>';
+
+function loadBlog(id) {
+  const b = BLOG_DATA[id];
+  if (!b) { loadListing(); return; }
+
+  // Update meta
+  document.getElementById('page-title').textContent = b.title + ' | 鴻瑋光電有限公司';
+  document.getElementById('page-desc').content = b.desc;
+
+  // Populate
+  document.getElementById('crumb-cat').textContent = b.cat;
+  document.getElementById('detail-meta').textContent = b.date + ' · 鴻瑋光電 · ' + b.cat;
+  document.getElementById('detail-title').textContent = b.title;
+  document.getElementById('detail-desc').textContent = b.desc;
+  document.getElementById('detail-tags').innerHTML = b.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
+  document.getElementById('detail-body').innerHTML = b.content;
+
+  // Related
+  document.getElementById('related-list').innerHTML = b.related_ids.map(rid => {
+    const rb = BLOG_DATA[rid];
+    return `<div class="related-card" onclick="navigateBlog('${rid}')">
+      <div style="font-size:11px;color:#ff5c3a;font-family:monospace;letter-spacing:1px;margin-bottom:5px;">${rb.cat}</div>
+      <div style="font-size:14px;font-weight:700;line-height:1.4;">${rb.title}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('blog-listing').style.display = 'none';
+  document.getElementById('blog-detail').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function loadListing() {
+  const grid = document.getElementById('blog-list-grid');
+  grid.innerHTML = Object.entries(BLOG_DATA).map(([id, b]) => `
+    <div class="blog-list-card" onclick="navigateBlog('${id}')">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:10px;">${b.cat} · ${b.date}</div>
+      <h3 style="font-size:17px;font-weight:700;color:#fff;line-height:1.45;margin-bottom:10px;">${b.title}</h3>
+      <p style="font-size:13px;color:#7a90b0;line-height:1.8;margin-bottom:14px;">${b.desc}</p>
+      <div style="margin-bottom:14px;">${b.tags.slice(0,3).map(t=>`<span class="tag-pill">${t}</span>`).join('')}</div>
+      <div style="display:flex;align-items:center;gap:6px;color:#ff5c3a;font-size:13px;font-weight:700;">閱讀更多 ${SVG_ARROW}</div>
+    </div>
+  `).join('');
+  document.getElementById('blog-detail').style.display = 'none';
+  document.getElementById('blog-listing').style.display = 'block';
+}
+
+function navigateBlog(id) {
+  const url = new URL(window.location);
+  url.searchParams.set('id', id);
+  window.history.pushState({}, '', url);
+  loadBlog(id);
+  window.scrollTo(0,0);
+}
+
+// Handle browser back/forward
+window.addEventListener('popstate', () => {
+  const id = new URLSearchParams(window.location.search).get('id');
+  id ? loadBlog(id) : loadListing();
+});
+
+// Initial load
+const initId = new URLSearchParams(window.location.search).get('id');
+initId ? loadBlog(initId) : loadListing();
+</script>
+
+<script src="shared-components.js"></script>
+</body>
+</html>
