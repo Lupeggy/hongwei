@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>關於我們 | 鴻瑋光電有限公司</title>
+<meta name="description" content="鴻瑋光電有限公司，深耕台灣雷射設備市場14年，提供光纖雷射切割機、CNC雕刻機、雷射打標機銷售與技術支援。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -9,106 +12,188 @@ html{scroll-behavior:smooth;}
 body{background:#050d1a;color:#e8eef8;font-family:'Noto Sans TC',sans-serif;overflow-x:hidden;}
 @keyframes pulse2{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.6)}}
 @keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes slideIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.anim{animation:slideUp .7s cubic-bezier(.22,1,.36,1) both;}
-.anim2{animation:slideUp .7s cubic-bezier(.22,1,.36,1) .18s both;}
-.anim3{animation:slideUp .7s cubic-bezier(.22,1,.36,1) .34s both;}
-.anim4{animation:slideUp .7s cubic-bezier(.22,1,.36,1) .5s both;}
 .gt{background:linear-gradient(135deg,#dc3c28,#ff6b3a,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1);}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.btn-primary{background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:14px 30px;text-decoration:none;font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;box-shadow:0 4px 24px rgba(220,60,40,.4);transition:opacity .2s,transform .2s;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;}
+.btn-primary{background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:13px 28px;text-decoration:none;font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;box-shadow:0 4px 24px rgba(220,60,40,.4);transition:opacity .2s,transform .2s;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;}
 .btn-primary:hover{opacity:.88;transform:translateY(-2px);}
-.btn-ghost{background:transparent;color:#e8eef8;border:1px solid rgba(255,255,255,.2);padding:13px 30px;text-decoration:none;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:border-color .2s,color .2s;}
+.btn-ghost{background:transparent;color:#e8eef8;border:1px solid rgba(255,255,255,.2);padding:12px 28px;text-decoration:none;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:border-color .2s,color .2s;}
 .btn-ghost:hover{border-color:#ff5c3a;color:#ff5c3a;}
-.pcard{background:#071223;border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;overflow:hidden;transition:all .25s;position:relative;border-radius:12px;}
-.pcard:hover{border-color:#dc3c28;transform:translateY(-4px);box-shadow:0 12px 28px rgba(220,60,40,.15);}
-.pcard .topbar{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .38s;}
-.pcard:hover .topbar{transform:scaleX(1);}
+.why2:hover{background:#091830!important;}
+.why2:hover .wb2{transform:scaleX(1)!important;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;}
-.eyebrow{font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.04);}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-bottom:32px;}
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#050d1a;}::-webkit-scrollbar-thumb{background:#1a3a6a;border-radius:4px;}
-input,textarea{-webkit-appearance:none;font-family:'Noto Sans TC',sans-serif;}
 img{display:block;}
 @media(max-width:768px){
+  .about-grid{grid-template-columns:1fr!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .checklist{grid-template-columns:1fr!important;}
   .footer-grid{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:repeat(auto-fill"]{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:2fr"]{grid-template-columns:1fr!important;}
-  [style*="padding:56px"],[style*="padding:72px"],[style*="padding:80px"],[style*="padding:88px"]{padding-left:6%!important;padding-right:6%!important;}
+  [style*="padding:80px"]{padding:56px 6%!important;}
+  [style*="padding:72px"]{padding:52px 6%!important;}
+  [style*="min-height:420px"]{min-height:280px!important;}
 }
 </style>
-</head><body>
+</head>
+<body>
 <div class="page-content" style="padding-top:68px;">
-<div style="background:#050d1a;padding:80px 5% 52px;border-bottom:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;"></div>
-  <div style="position:absolute;top:-10%;right:0;width:50%;height:120%;background:radial-gradient(ellipse,rgba(220,60,40,.07) 0%,transparent 70%);"></div>
-  <div style="position:relative;z-index:2;" class="anim">
+
+<!-- Page header -->
+<div style="background:#050d1a;padding:80px 5% 52px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+  <div style="position:absolute;top:-10%;right:0;width:50%;height:120%;background:radial-gradient(ellipse,rgba(220,60,40,.07) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:2;animation:slideUp .7s cubic-bezier(.22,1,.36,1) both;">
     <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// ABOUT US</div>
     <h1 style="font-size:clamp(2rem,5vw,3.8rem);font-weight:900;color:#fff;margin-bottom:12px;">關於<span class="gt">鴻瑋光電</span></h1>
   </div>
 </div>
 
-<section style="background:#071223;padding:72px 5%;">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:start;margin-bottom:72px;">
-    <div class="anim">
-      <p style="font-size:16px;color:#7a90b0;line-height:2;margin-bottom:20px;">鴻瑋光電有限公司成立於 2010 年，專注於工業雷射切割與 CNC 雕刻設備的銷售、安裝與技術支援。深耕台灣製造業市場逾 14 年，以專業技術與完善售後服務，協助各行各業提升生產效率。</p>
-      <p style="font-size:16px;color:#7a90b0;line-height:2;margin-bottom:28px;">我們代理 HONGWEI 品牌全系列設備，涵蓋光纖雷射切割機、CO₂ 雷射切割機、CNC 雕刻機及雷射打標機，服務客戶遍佈台灣北中南各地。</p>
+<!-- Company intro -->
+<section style="background:#071223;padding:80px 5%;">
+  <div class="about-grid">
+    <!-- Left: text -->
+    <div style="animation:slideUp .7s cubic-bezier(.22,1,.36,1) .1s both;">
+      <div style="display:inline-block;background:rgba(220,60,40,.1);border:1px solid rgba(220,60,40,.3);padding:5px 16px;font-size:12px;color:#ff5c3a;letter-spacing:3px;font-family:'Share Tech Mono',monospace;margin-bottom:18px;border-radius:4px;">ABOUT US</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:18px;">深耕台灣<span class="gt">14 年</span><br>雷射設備專業供應商</h2>
+      <p style="font-size:15px;color:#7a90b0;line-height:1.9;margin-bottom:18px;">鴻瑋光電有限公司成立於 2010 年，專注光纖雷射切割機、CO₂ 雷射切割機、CNC 雕刻機及雷射打標機的銷售、安裝與技術支援，服務製造業與各類加工廠，提供一站式整廠設備解決方案。</p>
+      <p style="font-size:15px;color:#7a90b0;line-height:1.9;margin-bottom:28px;">我們代理 HONGWEI 品牌全系列設備，服務客戶遍佈台灣北中南各地，並提供全台到府安裝與操作訓練，深耕市場 14 年，服務客戶超過 500 家。</p>
+
+      <!-- Certifications -->
       <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:3px;margin-bottom:12px;">CERTIFICATIONS</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-size:14px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg>ISO 9001 品質管理</span><span style="font-size:14px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg>CE 歐洲安全認證</span><span style="font-size:14px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg>MIT 台灣製造品質</span><span style="font-size:14px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg>原廠授權代理</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;"><span style="font-size:13px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;border-radius:6px;margin:3px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg> ISO 9001 品質管理</span><span style="font-size:13px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;border-radius:6px;margin:3px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg> CE 歐洲安全認證</span><span style="font-size:13px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;border-radius:6px;margin:3px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg> MIT 台灣製造品質</span><span style="font-size:13px;color:#e8eef8;background:#091830;border:1px solid rgba(255,255,255,.1);padding:7px 14px;display:inline-flex;align-items:center;gap:6px;border-radius:6px;margin:3px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg> 原廠授權代理</span></div>
+
+      <!-- Checklist -->
+      <div class="checklist"><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">光纖雷射切割設備</span></div><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">到府安裝調機</span></div><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">CNC 雕刻機專業配置</span></div><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">操作教育訓練</span></div><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">設備安裝與現場調整</span></div><div style="display:flex;align-items:center;gap:10px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#ff5c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3.5 3.5 6.5-7"/></svg><span style="font-size:14px;color:#c8d8e8;">24H 技術支援</span></div></div>
+
+      <!-- CTA buttons -->
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">免費諮詢 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="products.html" class="btn-ghost">查看設備 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
     </div>
-    <div class="anim2" style="background:#091830;border:1px solid rgba(255,255,255,.07);padding:36px 28px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:4px;margin-bottom:24px;">COMPANY OVERVIEW</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;"><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue';font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">14+</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">年產業經驗</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue';font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">500+</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">服務客戶數</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue';font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">8</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">設備系列</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue';font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">24H</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">售後回應</div></div></div>
-      <div style="margin-top:20px;display:flex;align-items:center;gap:8px;">
-        <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:pulse2 2s infinite;flex-shrink:0;"></div>
-        <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:1px;">SYSTEM ONLINE · 週一至週六 09:00–18:00</span>
+
+    <!-- Right: stats card + stacked images -->
+    <div style="animation:slideUp .7s cubic-bezier(.22,1,.36,1) .25s both;">
+      <!-- Stat card -->
+      <div style="background:#091830;border:1px solid rgba(255,255,255,.07);padding:36px 28px;position:relative;overflow:hidden;border-radius:12px;margin-bottom:20px;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:4px;margin-bottom:24px;">COMPANY OVERVIEW</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">14+</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">年產業經驗</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">500+</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">服務客戶</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">8</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">設備系列</div></div><div style="border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:18px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">24H</div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-top:4px;">售後回應</div></div>
+        </div>
+        <div style="margin-top:20px;display:flex;align-items:center;gap:8px;">
+          <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:pulse2 2s infinite;flex-shrink:0;"></div>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:1px;">ONLINE · 週一至週五 09:00–18:00</span>
+        </div>
+      </div>
+      <!-- Address -->
+      <div style="background:#071223;border:1px solid rgba(255,255,255,.07);padding:20px 22px;border-radius:10px;display:flex;align-items:flex-start;gap:10px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3a5070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <div style="font-size:12px;color:#3a5070;font-family:monospace;letter-spacing:1px;margin-bottom:4px;">ADDRESS</div>
+          <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">333 桃園市龜山區忠義路一段 1196-1 號</div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;text-align:center;">// OUR VALUES</div>
-  <h2 style="font-size:2rem;font-weight:900;color:#fff;text-align:center;margin-bottom:40px;">企業<span class="gt">核心價值</span></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;background:rgba(255,255,255,.07);margin-bottom:72px;"><div class="why"><div class="wb"></div><div style="margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round"><circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="8"/><circle cx="18" cy="18" r="3" fill="#ff5c3a"/></svg></div><h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">品質第一</h3><p style="font-size:14px;color:#3a5070;line-height:1.8;">所有設備均經嚴格品質測試，確保交機即用。</p></div><div class="why"><div class="wb"></div><div style="margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 26V15a2 2 0 014 0v5m0 0a2 2 0 014 0v2m0 0a2 2 0 014 0v4a8 8 0 01-16 0v-4"/></svg></div><h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">客戶優先</h3><p style="font-size:14px;color:#3a5070;line-height:1.8;">業務直接對接，24H 回覆，售後不打折。</p></div><div class="why"><div class="wb"></div><div style="margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6a9 9 0 016.364 15.364A6 6 0 0122 26v1a1 1 0 01-1 1h-6a1 1 0 01-1-1v-1a6 6 0 01-2.364-4.636A9 9 0 0118 6z"/><path d="M15 30h6"/></svg></div><h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">持續創新</h3><p style="font-size:14px;color:#3a5070;line-height:1.8;">持續引進新技術，協助客戶提升競爭力。</p></div></div>
+<!-- Core values -->
+<section style="background:#050d1a;border-top:1px solid rgba(255,255,255,.06);padding:80px 5%;">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// OUR VALUES</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:#fff;">企業<span class="gt">核心價值</span></h2>
+  </div>
+  <div class="values-grid"><div class="why2" style="background:#071223;padding:40px 32px;position:relative;overflow:hidden;transition:background .3s;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .4s;" class="wb2"></div>
+  <div style="margin-bottom:16px;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/><circle cx="20" cy="20" r="3" fill="#ff5c3a"/></svg></div>
+  <h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">品質第一</h3>
+  <p style="font-size:14px;color:#7a90b0;line-height:1.85;">所有設備均經嚴格品質測試，確保交機即用，品質穩定一致。</p>
+</div><div class="why2" style="background:#071223;padding:40px 32px;position:relative;overflow:hidden;transition:background .3s;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .4s;" class="wb2"></div>
+  <div style="margin-bottom:16px;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30V18a2 2 0 014 0v6m0 0a2 2 0 014 0v2m0 0a2 2 0 014 0v4a9 9 0 01-18 0v-4"/></svg></div>
+  <h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">客戶優先</h3>
+  <p style="font-size:14px;color:#7a90b0;line-height:1.85;">業務直接對接，24H 回覆，售後服務不打折。</p>
+</div><div class="why2" style="background:#071223;padding:40px 32px;position:relative;overflow:hidden;transition:background .3s;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#dc3c28,#ff8c50);transform:scaleX(0);transform-origin:left;transition:transform .4s;" class="wb2"></div>
+  <div style="margin-bottom:16px;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#ff5c3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6a10 10 0 017.07 17.07A7 7 0 0124 29v1a1 1 0 01-1 1h-6a1 1 0 01-1-1v-1a7 7 0 01-3.07-5.93A10 10 0 0120 6z"/><path d="M17 34h6"/></svg></div>
+  <h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;">持續創新</h3>
+  <p style="font-size:14px;color:#7a90b0;line-height:1.85;">持續引進新技術，協助客戶提升競爭力與生產效率。</p>
+</div></div>
+</section>
 
-  <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// HISTORY</div>
-  <h2 style="font-size:2rem;font-weight:900;color:#fff;margin-bottom:40px;">發展<span class="gt">歷程</span></h2>
-  <div style="position:relative;max-width:680px;">
-    <div style="position:absolute;left:16px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,#dc3c28,#ff5c3a,transparent);"></div>
-    <div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">10</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2010</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">鴻瑋光電有限公司成立，開始代理雷射切割設備</div></div>
-</div><div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">13</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2013</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">引進 CNC 雕刻機系列，拓展服務項目</div></div>
-</div><div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">16</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2016</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">正式代理光纖金屬雷射切割機</div></div>
-</div><div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">19</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2019</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">服務客戶突破 200 家，擴大售後團隊</div></div>
-</div><div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">22</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2022</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">導入全台到府安裝服務，強化客戶支援</div></div>
-</div><div style="display:flex;gap:24px;margin-bottom:28px;">
-  <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 12px rgba(220,60,40,.4);">24</div>
-  <div style="padding-top:4px;"><div style="font-family:'Bebas Neue';font-size:1.4rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:4px;">2024</div><div style="font-size:14px;color:#e8eef8;line-height:1.6;">服務客戶突破 500 家，深耕台灣製造業</div></div>
+<!-- Timeline -->
+<section style="background:#071223;border-top:1px solid rgba(255,255,255,.06);padding:80px 5%;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:5px;margin-bottom:10px;">// HISTORY</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:#fff;margin-bottom:48px;">發展<span class="gt">歷程</span></h2>
+    <div style="position:relative;">
+      <div style="position:absolute;left:18px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,#dc3c28,#ff5c3a,transparent);"></div>
+      <div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 200ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">10</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2010</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">鴻瑋光電有限公司成立，開始代理雷射切割設備</div>
+  </div>
+</div><div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 280ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">13</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2013</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">引進 CNC 雕刻機系列，拓展服務項目</div>
+  </div>
+</div><div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 360ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">16</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2016</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">正式代理光纖金屬雷射切割機</div>
+  </div>
+</div><div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 440ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">19</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2019</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">服務客戶突破 200 家，擴大售後團隊</div>
+  </div>
+</div><div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 520ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">22</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2022</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">導入全台到府安裝服務，強化客戶支援</div>
+  </div>
+</div><div style="display:flex;gap:24px;margin-bottom:28px;opacity:0;animation:slideUp .6s ease 600ms both;">
+  <div style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dc3c28,#ff6b3a);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;font-family:monospace;box-shadow:0 0 16px rgba(220,60,40,.4);">24</div>
+  <div style="padding-top:6px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#ff5c3a;letter-spacing:2px;line-height:1;margin-bottom:5px;">2024</div>
+    <div style="font-size:14px;color:#a0b4cc;line-height:1.7;">服務客戶突破 500 家，深耕台灣製造業</div>
+  </div>
 </div>
+    </div>
   </div>
 </section>
 
-<div style="background:linear-gradient(135deg,#dc3c28,#ff6b3a,#ff8c50);padding:52px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;position:relative;overflow:hidden;">
+<!-- CTA -->
+<div style="background:linear-gradient(135deg,#dc3c28,#c8281a);padding:64px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0,rgba(0,0,0,.04) 1px,transparent 1px,transparent 10px);"></div>
-  <div style="position:relative;"><h2 style="font-size:1.8rem;font-weight:900;color:#fff;margin-bottom:6px;">有設備需求？立即聯繫我們</h2><p style="color:rgba(255,255,255,.8);font-size:15px;">週一至週六 09:00–18:00 快速回覆</p></div>
-  <div style="display:flex;gap:12px;position:relative;">
-    <a href="tel:0935249966" style="background:#fff;color:#dc3c28;padding:14px 26px;text-decoration:none;font-size:16px;font-weight:700;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg> 立即撥打</a>
-    <a href="https://line.me/ti/p/+886935249966" target="_blank" style="background:#06C755;color:#fff;padding:14px 26px;text-decoration:none;font-size:16px;font-weight:700;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.418 14.024 24 12.304 24 10.304z"/></svg> LINE</a>
+  <div style="position:relative;">
+    <h2 style="font-size:clamp(1.4rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:8px;">有設備需求？立即聯繫我們</h2>
+    <p style="color:rgba(255,255,255,.78);font-size:15px;">週一至週五 09:00–18:00 · 快速回覆報價</p>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;">
+    <a href="tel:0935249966" style="background:#fff;color:#b91c1c;padding:14px 28px;text-decoration:none;font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      0935-249-966
+    </a>
+    <a href="https://line.me/ti/p/+886935249966?openExternalBrowser=1" target="_blank" style="background:#06C755;color:#fff;padding:14px 28px;text-decoration:none;font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:opacity .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.418 14.024 24 12.304 24 10.304z"/></svg>
+      LINE 詢問
+    </a>
+    <a href="contact.html" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);padding:14px 28px;text-decoration:none;font-size:15px;font-weight:600;display:inline-flex;align-items:center;gap:8px;border-radius:4px;transition:background .2s;" onmouseover="this.style.background='rgba(255,255,255,.25)'" onmouseout="this.style.background='rgba(255,255,255,.15)'">
+      免費諮詢
+    </a>
   </div>
 </div>
 
 </div>
 <script src="shared-components.js"></script>
-</body></html>
+</body>
+</html>
