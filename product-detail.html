@@ -22,6 +22,13 @@ img{display:block;}
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#050d1a;}::-webkit-scrollbar-thumb{background:#1a3a6a;border-radius:4px;}
 @media(max-width:900px){.detail-grid{grid-template-columns:1fr!important;}.sidebar{display:none!important;}}
 @media(max-width:600px){.cta-row{flex-direction:column!important;}.cta-row a{width:100%!important;justify-content:center!important;}.mat-app-grid{grid-template-columns:1fr!important;}}
+
+#specs-table, #features-table, #materials-list, #applications-list, 
+#sidebar-products, #more-grid, #prod-name, #prod-tagline, #prod-desc,
+#main-img, #crumb-cat, #crumb-name, #prod-badge, #prod-series {
+  opacity: 1 !important;
+  transform: none !important;
+}
 </style>
 </head>
 <body>
@@ -202,7 +209,16 @@ function loadProduct(id){
 }
 
 window.addEventListener('popstate',function(){loadProduct(new URLSearchParams(window.location.search).get('id')||'ha-1530');});
-loadProduct(new URLSearchParams(window.location.search).get('id')||'ha-1530');
+
+// Run after shared-components finishes injecting
+var _initId = new URLSearchParams(window.location.search).get('id')||'ha-1530';
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',function(){ loadProduct(_initId); });
+}else{
+  loadProduct(_initId);
+}
+// Re-run after a tiny delay to override any opacity:0 from scroll reveal
+setTimeout(function(){ loadProduct(_initId); }, 100);
 </script>
 <script src="shared-components.js"></script>
 </body>
