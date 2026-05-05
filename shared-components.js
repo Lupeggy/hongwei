@@ -136,11 +136,7 @@
         '<div style="font-family:\'Share Tech Mono\',monospace;font-size:11px;color:#1a3a5a;letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.05);">CONTACT</div>' +
         '<div style="font-size:11px;color:#1a3a5a;font-family:\'Share Tech Mono\',monospace;margin-bottom:6px;letter-spacing:1px;">PHONE</div>' +
         '<a href="tel:0935249966" style="font-size:22px;font-weight:900;display:block;margin-bottom:18px;text-decoration:none;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0935-249-966</a>' +
-    <div style="font-size:11px;color:#1a3a5a;font-family:\'Share Tech Mono\',monospace;margin-bottom:6px;letter-spacing:1px;">市話</div>' +
-        '<a href="tel:0935249966" style="font-size:22px;font-weight:900;display:block;margin-bottom:18px;text-decoration:none;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">03-3206808</a>' +
-        <div style="font-size:11px;color:#1a3a5a;font-family:\'Share Tech Mono\',monospace;margin-bottom:6px;letter-spacing:1px;">傳真</div>' +
-        '<a href="tel:0935249966" style="font-size:22px;font-weight:900;display:block;margin-bottom:18px;text-decoration:none;background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">03-3206108</a>' +
-          '<div style="display:flex;align-items:center;gap:7px;">' +
+        '<div style="display:flex;align-items:center;gap:7px;">' +
           '<div style="width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:pulse2 2s infinite;flex-shrink:0;"></div>' +
           '<span style="font-size:12px;color:#3a5070;">週一～週五 09:00–18:00</span>' +
         '</div>' +
