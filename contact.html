@@ -162,9 +162,19 @@ input:focus,textarea:focus{border-color:#ff5c3a!important;}
     <!-- RIGHT: Form -->
     <div style="background:#071223;border:1px solid rgba(255,255,255,.07);padding:36px 32px;position:relative;overflow:hidden;border-radius:16px;">
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#dc3c28,#ff8c50);"></div>
-      <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px;">
-        <div style="width:4px;height:20px;background:linear-gradient(135deg,#dc3c28,#ff8c50);border-radius:2px;"></div>
-        索取設備報價單
+      <div style="margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07);">
+        <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+          <div style="width:4px;height:20px;background:linear-gradient(135deg,#dc3c28,#ff8c50);border-radius:2px;"></div>
+          索取設備報價單
+        </div>
+        <!-- 24H Promise -->
+        <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:8px;padding:12px 14px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;flex-shrink:0;margin-top:4px;animation:pulse2 2s infinite;"></div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#22c55e;margin-bottom:3px;">24 小時內專業工程師回覆報價</div>
+            <div style="font-size:12px;color:#7a90b0;line-height:1.6;">填寫基本資料後，我們的業務工程師將在 <strong style="color:#e8eef8;">24 小時內</strong>聯絡您，提供專業選機建議與客製化報價方案。</div>
+          </div>
+        </div>
       </div>
 
       <div id="form-wrap">
@@ -197,9 +207,14 @@ input:focus,textarea:focus{border-color:#ff5c3a!important;}
           <textarea id="f-msg" placeholder="請描述加工需求、材料種類、批量等（選填）" style="width:100%;background:#050d1a;border:1px solid rgba(255,255,255,.08);color:#e8eef8;padding:13px 16px;font-size:15px;outline:none;height:100px;resize:vertical;border-radius:6px;font-family:'Noto Sans TC',sans-serif;transition:border-color .2s;"></textarea>
         </div>
         <button id="submit-btn" onclick="submitForm()" style="width:100%;background:#06C755;color:#fff;border:none;padding:16px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Noto Sans TC',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 20px rgba(6,199,85,.3);transition:opacity .2s;border-radius:8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="white"/></svg> 送出並開啟 LINE 詢問
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="white"/></svg> 立即送出 — 24H 內專人回覆
         </button>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;text-align:center;margin-top:10px;letter-spacing:1px;">週一至週五 09:00–18:00 快速回覆</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;text-align:center;margin-top:10px;letter-spacing:1px;">週一至週五 09:00–18:00 · 24H 內回覆 · 免費諮詢</div>
+        <div style="display:flex;justify-content:center;gap:16px;margin-top:10px;flex-wrap:wrap;">
+          <span style="font-size:11px;color:#3a5070;display:flex;align-items:center;gap:4px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>免費選機建議</span>
+          <span style="font-size:11px;color:#3a5070;display:flex;align-items:center;gap:4px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>到府安裝服務</span>
+          <span style="font-size:11px;color:#3a5070;display:flex;align-items:center;gap:4px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>14年專業保障</span>
+        </div>
       </div>
 
       <!-- Success state -->
