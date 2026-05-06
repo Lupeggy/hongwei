@@ -51,6 +51,33 @@ img{display:block;}
 </style>
 </head>
 <body>
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9000;height:68px;background:rgba(5,13,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;font-family:'Noto Sans TC',sans-serif;">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
+    <img src="/logo.png" alt="鴻瑋光電有限公司 LOGO" style="height:40px;width:auto;" onerror="this.style.display='none'"/>
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;color:#fff;">鴻瑋<span style="background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">光電</span></span>
+  </a>
+  <div id="nav-desktop" style="display:flex;gap:20px;align-items:center;">
+    <a href="index.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">首頁</a>
+    <a href="products.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">產品目錄</a>
+    <a href="about.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">關於我們</a>
+    <a href="blog.html" style="color:#ff5c3a;text-decoration:none;font-size:13px;padding:6px 10px;font-weight:700;border-bottom:2px solid #ff5c3a;">部落格</a>
+    <a href="contact.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">聯絡我們</a>
+    <a href="contact.html" style="background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:9px 20px;text-decoration:none;font-size:13px;font-weight:700;border-radius:4px;margin-left:8px;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">立即詢價</a>
+  </div>
+  <button id="ham-btn" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;align-items:center;" onclick="toggleMenu()">
+    <span id="h1" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+    <span id="h2" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+    <span id="h3" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+  </button>
+</nav>
+<div id="mob-overlay" style="display:none;position:fixed;inset:0;z-index:8999;background:rgba(3,9,18,.97);flex-direction:column;align-items:flex-start;justify-content:center;padding:80px 8%;">
+  <a href="index.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">首頁</a>
+  <a href="products.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">產品目錄</a>
+  <a href="about.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">關於我們</a>
+  <a href="blog.html" style="font-size:1.8rem;font-weight:900;color:#ff5c3a;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">部落格</a>
+  <a href="contact.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">聯絡我們</a>
+  <a href="contact.html" style="margin-top:24px;background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:14px 28px;font-size:15px;font-weight:700;text-decoration:none;border-radius:4px;display:inline-block;">立即詢價</a>
+</div>
 
 <!-- Nav -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:9000;height:68px;background:rgba(5,13,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;">
@@ -240,7 +267,30 @@ renderList('全部');
 var initId = new URLSearchParams(window.location.search).get('id');
 if (initId) { showDetail(initId); }
 </script>
+<footer style="background:#030912;border-top:1px solid rgba(255,255,255,.06);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+  <div style="font-size:12px;color:#1a3a5a;font-family:monospace;">© 2026 鴻瑋光電有限公司 · 保留所有權利</div>
+  <div style="font-size:12px;color:#1a3a5a;font-family:monospace;">Design by <a href="https://peggyportfolio.netlify.app/" target="_blank" style="color:#ff5c3a;text-decoration:none;">Peggy Lu · 曜呂數位</a></div>
+</footer>
 
-<script src="shared-components.js"></script>
+<script>
+var menuOpen = false;
+function toggleMenu() {
+  menuOpen = !menuOpen;
+  var o = document.getElementById('mob-overlay');
+  o.style.display = menuOpen ? 'flex' : 'none';
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
+  document.getElementById('h1').style.transform = menuOpen ? 'translateY(7px) rotate(45deg)' : '';
+  document.getElementById('h2').style.opacity = menuOpen ? '0' : '1';
+  document.getElementById('h3').style.transform = menuOpen ? 'translateY(-7px) rotate(-45deg)' : '';
+}
+function checkW() {
+  var d = document.getElementById('nav-desktop');
+  var h = document.getElementById('ham-btn');
+  if (window.innerWidth <= 768) { d.style.display='none'; h.style.display='flex'; }
+  else { d.style.display='flex'; h.style.display='none'; if(menuOpen) toggleMenu(); }
+}
+window.addEventListener('resize', checkW);
+checkW();
+</script>
 </body>
 </html>
