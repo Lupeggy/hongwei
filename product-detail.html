@@ -132,20 +132,57 @@ img{display:block;}
 <body>
 
 <!-- Self-contained Nav -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:9000;height:68px;background:rgba(5,13,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9000;height:68px;background:rgba(5,13,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;font-family:'Noto Sans TC',sans-serif;">
   <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
     <img src="/logo.png" alt="鴻瑋光電有限公司 LOGO" style="height:40px;width:auto;" onerror="this.style.display='none'"/>
-    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;color:#fff;">鴻瑋<span class="gt">光電</span></span>
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;color:#fff;">鴻瑋<span style="background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">光電</span></span>
   </a>
-  <div class="nav-links" style="display:flex;gap:20px;align-items:center;">
-    <a href="index.html" class="nav-link">首頁</a>
-    <a href="products.html" class="nav-link" style="color:#ff5c3a;border-bottom-color:#ff5c3a;font-weight:700;">產品目錄</a>
-    <a href="about.html" class="nav-link">關於我們</a>
-    <a href="blog.html" class="nav-link">部落格</a>
-    <a href="contact.html" class="nav-link">聯絡我們</a>
-    <a href="contact.html" style="background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:9px 20px;text-decoration:none;font-size:13px;font-weight:700;border-radius:4px;margin-left:8px;">立即詢價</a>
+  <div id="hw-nd" style="display:flex;gap:20px;align-items:center;">
+    <a href="index.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">首頁</a>
+    <a href="products.html" style="color:#ff5c3a;text-decoration:none;font-size:13px;padding:6px 10px;font-weight:700;border-bottom:2px solid #ff5c3a;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#ff5c3a'">產品目錄</a>
+    <a href="about.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">關於我們</a>
+    <a href="blog.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">部落格</a>
+    <a href="contact.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">聯絡我們</a>
+    
+    <a href="contact.html" style="background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:9px 20px;text-decoration:none;font-size:13px;font-weight:700;border-radius:4px;margin-left:8px;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">立即詢價</a>
   </div>
+  <button id="hw-hb" onclick="hwMenu()" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;align-items:center;">
+    <span id="hw-h1" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+    <span id="hw-h2" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+    <span id="hw-h3" style="display:block;width:22px;height:2px;background:#fff;transition:all .3s;border-radius:2px;"></span>
+  </button>
 </nav>
+<div id="hw-mo" style="display:none;position:fixed;inset:0;z-index:8999;background:rgba(3,9,18,.97);flex-direction:column;align-items:flex-start;justify-content:center;padding:80px 8%;">
+  <a href="index.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">首頁</a>
+  <a href="products.html" style="font-size:1.8rem;font-weight:900;color:#ff5c3a;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">產品目錄</a>
+  <a href="about.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">關於我們</a>
+  <a href="blog.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">部落格</a>
+  <a href="contact.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">聯絡我們</a>
+  
+  <a href="contact.html" style="margin-top:24px;background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:14px 28px;font-size:15px;font-weight:700;text-decoration:none;border-radius:4px;display:inline-block;">立即詢價</a>
+</div>
+<script>
+(function(){
+  var open=false;
+  window.hwMenu=function(){
+    open=!open;
+    document.getElementById('hw-mo').style.display=open?'flex':'none';
+    document.body.style.overflow=open?'hidden':'';
+    document.getElementById('hw-h1').style.transform=open?'translateY(7px) rotate(45deg)':'';
+    document.getElementById('hw-h2').style.opacity=open?'0':'1';
+    document.getElementById('hw-h3').style.transform=open?'translateY(-7px) rotate(-45deg)':'';
+  };
+  function cw(){
+    var nd=document.getElementById('hw-nd');
+    var hb=document.getElementById('hw-hb');
+    if(!nd||!hb)return;
+    if(window.innerWidth<=900){nd.style.display='none';hb.style.display='flex';}
+    else{nd.style.display='flex';hb.style.display='none';if(open){open=false;document.getElementById('hw-mo').style.display='none';document.body.style.overflow='';}}
+  }
+  window.addEventListener('resize',cw);
+  cw();
+})();
+</script>
 
 <!-- Breadcrumb -->
 <div style="padding-top:68px;">
