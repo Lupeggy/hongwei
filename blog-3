@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/favicon.ico">
+<title>CO₂ 雷射切割機 vs 光纖雷射切割機：哪一種適合你？| 鴻瑋光電</title>
+<meta name="description" content="CO₂ 雷射與光纖雷射哪個好？波長、材料適用性、維護成本、價格完整比較表。廣告業選 CO₂，鈑金業選光纖，混合需求選兩用機。">
+<meta name="keywords" content="CO2雷射切割機,光纖雷射切割機,雷射切割機比較,CO2vs光纖雷射,雷射切割機選購">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hongweilaser.com/blog-3">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CO₂ 雷射切割機 vs 光纖雷射切割機：哪一種適合你？","description":"CO₂ 雷射與光纖雷射核心差異、材料適用性、維護成本完整比較，幫你快速做出選機決策。","author":{"@type":"Organization","name":"鴻瑋光電有限公司"},"publisher":{"@type":"Organization","name":"鴻瑋光電有限公司","url":"https://hongweilaser.com"},"datePublished":"2026-04-01","url":"https://hongweilaser.com/blog-3"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#050d1a;color:#e8eef8;font-family:'Noto Sans TC',sans-serif;}
+.gt{background:linear-gradient(135deg,#dc3c28,#ff8c50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+img{display:block;max-width:100%;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#050d1a;}::-webkit-scrollbar-thumb{background:#1a3a6a;border-radius:4px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:68px;background:rgba(5,13,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;padding:0 5%;}
+.container{max-width:820px;margin:0 auto;padding:0 5%;}
+.article h2{font-size:1.4rem;font-weight:700;color:#fff;margin:32px 0 12px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06);}
+.article h2:first-child{border-top:none;margin-top:0;}
+.article h3{font-size:1.1rem;font-weight:700;color:#e8eef8;margin:20px 0 8px;}
+.article p{font-size:15px;color:#a0b4cc;line-height:1.9;margin-bottom:14px;}
+.article ul{margin:8px 0 16px 0;display:flex;flex-direction:column;gap:8px;}
+.article ul li{font-size:15px;color:#a0b4cc;line-height:1.7;padding-left:20px;position:relative;}
+.article ul li::before{content:'▸';position:absolute;left:0;color:#ff5c3a;font-size:12px;top:3px;}
+.article strong{color:#e8eef8;font-weight:700;}
+.callout{background:rgba(220,60,40,.08);border-left:3px solid #dc3c28;padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;color:#a0b4cc;line-height:1.8;}
+.callout strong{color:#ff5c3a;}
+.spec-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+.spec-table th{background:#0c2040;color:#e8eef8;padding:11px 16px;text-align:left;font-weight:700;border:1px solid rgba(255,255,255,.08);}
+.spec-table td{padding:10px 16px;border:1px solid rgba(255,255,255,.06);color:#a0b4cc;}
+.spec-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.tag{display:inline-block;font-size:11px;color:#ff5c3a;background:rgba(220,60,40,.1);border:1px solid rgba(220,60,40,.25);padding:3px 10px;border-radius:20px;margin:2px;}
+.rel-card{display:block;text-decoration:none;background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;transition:border-color .2s;}
+.rel-card:hover{border-color:#ff5c3a;}
+/* Decision boxes */
+.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.decision-box{border-radius:10px;padding:20px;border:1px solid;}
+.decision-co2{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.3);}
+.decision-fiber{background:rgba(220,60,40,.08);border-color:rgba(220,60,40,.3);}
+.decision-title{font-size:14px;font-weight:700;margin-bottom:10px;}
+.decision-co2 .decision-title{color:#a78bfa;}
+.decision-fiber .decision-title{color:#ff5c3a;}
+.decision-list{font-size:13px;color:#a0b4cc;line-height:1.8;}
+@media(max-width:900px){#hw-nd{display:none!important;}#hw-hb{display:flex!important;}.decision-grid{grid-template-columns:1fr!important;}}
+@media(max-width:600px){.rel-grid{grid-template-columns:1fr!important;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
+    <img src="/logo.png" alt="鴻瑋光電" style="height:40px;width:auto;" onerror="this.style.display='none'"/>
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;color:#fff;">鴻瑋<span class="gt">光電</span></span>
+  </a>
+  <div id="hw-nd" style="display:flex;gap:20px;align-items:center;">
+    <a href="index.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">首頁</a>
+    <a href="products.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">產品目錄</a>
+    <a href="about.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">關於我們</a>
+    <a href="blog.html" style="color:#ff5c3a;font-weight:700;border-bottom:2px solid #ff5c3a;text-decoration:none;font-size:13px;padding:6px 10px;">部落格</a>
+    <a href="contact.html" style="color:#7a90b0;text-decoration:none;font-size:13px;padding:6px 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#7a90b0'">聯絡我們</a>
+    <a href="contact.html" style="background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:9px 20px;text-decoration:none;font-size:13px;font-weight:700;border-radius:4px;margin-left:8px;">立即詢價</a>
+  </div>
+  <button id="hw-hb" onclick="hwM()" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;align-items:center;">
+    <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px;"></span>
+  </button>
+</nav>
+<div id="hw-mo" style="display:none;position:fixed;inset:0;z-index:8999;background:rgba(3,9,18,.97);flex-direction:column;align-items:flex-start;justify-content:center;padding:80px 8%;">
+  <a href="index.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">首頁</a>
+  <a href="products.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">產品目錄</a>
+  <a href="about.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">關於我們</a>
+  <a href="blog.html" style="font-size:1.8rem;font-weight:900;color:#ff5c3a;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">部落格</a>
+  <a href="contact.html" style="font-size:1.8rem;font-weight:900;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);width:100%;display:block;">聯絡我們</a>
+  <a href="contact.html" style="margin-top:24px;background:linear-gradient(135deg,#dc3c28,#ff6b3a);color:#fff;padding:14px 28px;font-size:15px;font-weight:700;text-decoration:none;border-radius:4px;display:inline-block;">立即詢價</a>
+</div>
+
+<div style="padding-top:68px;">
+  <div style="padding:14px 5%;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap;background:#050d1a;">
+    <a href="index.html" style="color:#3a5070;text-decoration:none;" onmouseover="this.style.color='#ff5c3a'" onmouseout="this.style.color='#3a5070'">首頁</a>
+    <span style="color:#1a3a5a;">›</span>
+    <a href="blog.html" style="color:#3a5070;text-decoration:none;" onmouseover="this.style.color='#ff5c3a'" onmouseout="this.style.color='#3a5070'">部落格</a>
+    <span style="color:#1a3a5a;">›</span>
+    <span style="color:#3a5070;">雷射切割機</span>
+    <span style="color:#1a3a5a;">›</span>
+    <span style="color:#a0b4cc;font-size:12px;">CO₂ vs 光纖雷射切割機比較</span>
+  </div>
+
+  <section style="padding:48px 0 80px;background:#050d1a;">
+    <div class="container">
+      <div style="margin-bottom:32px;">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#3a5070;letter-spacing:2px;margin-bottom:10px;">2026年4月 · 鴻瑋光電 · 雷射切割機</div>
+        <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:14px;">CO₂ 雷射切割機 vs 光纖雷射切割機：<span class="gt">哪一種適合你？</span></h1>
+        <p style="font-size:16px;color:#7a90b0;line-height:1.8;margin-bottom:18px;">CO₂ 雷射與光纖雷射是目前市場上最主流的兩種雷射切割技術。兩者波長不同，決定了對不同材料的適用性。這篇文章一次說明兩者核心差異，幫你在 5 分鐘內做出正確選擇。</p>
+        <div>
+          <span class="tag">雷射切割機比較</span>
+          <span class="tag">CO₂雷射</span>
+          <span class="tag">光纖雷射</span>
+          <span class="tag">選機指南</span>
+        </div>
+      </div>
+
+      <div class="article" style="background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:36px 40px;margin-bottom:32px;">
+
+        <h2>先搞懂：波長決定一切</h2>
+        <p>CO₂ 雷射波長為 <strong>10,600nm（10.6μm）</strong>，光纖雷射波長為 <strong>1,064nm（1.06μm）</strong>，CO₂ 雷射的波長是光纖雷射的 10 倍。</p>
+        <p>波長不同，材料對雷射的<strong>吸收率</strong>截然不同：</p>
+        <ul>
+          <li><strong>壓克力、木材、皮革等有機材料</strong>：對 CO₂ 波長（10.6μm）吸收率極高 → CO₂ 雷射效率最佳</li>
+          <li><strong>金屬（碳鋼、不鏽鋼、鋁材）</strong>：對光纖波長（1.06μm）吸收率是 CO₂ 的 10 倍以上 → 光纖雷射效率最佳</li>
+        </ul>
+        <p>這就是為什麼「買雷射切割機前，先確定你要切什麼材料」是最重要的第一步。</p>
+
+        <h2>完整比較表</h2>
+        <table class="spec-table">
+          <tr><th>比較項目</th><th>CO₂ 雷射切割機</th><th>光纖雷射切割機</th></tr>
+          <tr><td><strong>雷射波長</strong></td><td>10,600nm</td><td>1,064nm</td></tr>
+          <tr><td><strong>金屬切割</strong></td><td>❌ 吸收率低，效率差</td><td>✅ 最佳選擇</td></tr>
+          <tr><td><strong>壓克力切割</strong></td><td>✅ 最佳選擇，邊緣光亮</td><td>❌ 幾乎無法吸收</td></tr>
+          <tr><td><strong>木材 / 皮革 / 布料</strong></td><td>✅ 非常適合</td><td>⚠ 部分可用，效果較差</td></tr>
+          <tr><td><strong>電耗</strong></td><td>較高（10-15KW）</td><td>較低（3-8KW）</td></tr>
+          <tr><td><strong>電光轉換效率</strong></td><td>約 10% 以下</td><td>約 30% 以上</td></tr>
+          <tr><td><strong>雷射源壽命</strong></td><td>8,000–15,000 小時</td><td>100,000 小時</td></tr>
+          <tr><td><strong>維護需求</strong></td><td>需定期更換雷射管</td><td>幾乎免維護</td></tr>
+          <tr><td><strong>設備價格</strong></td><td>較低（15–120 萬）</td><td>較高（80–400 萬）</td></tr>
+          <tr><td><strong>切割速度（同功率）</strong></td><td>較慢</td><td>較快</td></tr>
+          <tr><td><strong>切割最小縫隙</strong></td><td>較大（0.1–0.3mm）</td><td>較小（0.05–0.1mm）</td></tr>
+        </table>
+
+        <h2>CO₂ 雷射適合哪些產業與材料？</h2>
+
+        <h3>最適合的材料：</h3>
+        <ul>
+          <li><strong>壓克力（PMMA）</strong>：切割邊緣光滑透明，是廣告業首選</li>
+          <li><strong>木材、夾板、密集板（MDF）</strong>：雕刻細膩，廣泛用於禮品與裝飾</li>
+          <li><strong>皮革</strong>：邊緣焦化自然封邊，不需後處理</li>
+          <li><strong>布料、不織布</strong>：切割精確，不脫線</li>
+          <li><strong>紙張、紙板</strong>：包裝盒型、賀卡切割</li>
+          <li><strong>橡膠、矽膠</strong>：印章、密封件加工</li>
+        </ul>
+
+        <h3>CO₂ 雷射適合這些產業：</h3>
+        <ul>
+          <li>廣告招牌業（壓克力燈箱字、PVC 看板）</li>
+          <li>禮品文創業（木質禮品雕刻、皮革壓紋）</li>
+          <li>包裝業（紙板切割、泡棉内襯）</li>
+          <li>服裝業（布料、蕾絲精密切割）</li>
+          <li>模型業（木質、壓克力模型零件）</li>
+        </ul>
+
+        <h2>光纖雷射適合哪些產業與材料？</h2>
+
+        <h3>最適合的材料：</h3>
+        <ul>
+          <li><strong>碳鋼</strong>：結構件、機械零件，切割速度最快</li>
+          <li><strong>不鏽鋼</strong>：廚具、醫療器械、建築裝飾件</li>
+          <li><strong>鋁材</strong>：航太、汽車、電子散熱片</li>
+          <li><strong>銅材、黃銅</strong>：電子連接器、精密零件</li>
+          <li><strong>鈦合金</strong>：醫療植入物、航太零件</li>
+        </ul>
+
+        <h3>光纖雷射適合這些產業：</h3>
+        <ul>
+          <li>五金鈑金業（碳鋼、不鏽鋼板材精密切割）</li>
+          <li>汽車零件製造（金屬底盤件、車身結構件）</li>
+          <li>電子業（鋁製散熱片、導電片）</li>
+          <li>建築裝飾（不鏽鋼花格、鋁板裝飾件）</li>
+          <li>機械設備製造（精密金屬零件）</li>
+        </ul>
+
+        <h2>我需要同時切割金屬和非金屬怎麼辦？</h2>
+        <p>這是很多工廠老闆的真實困境：業務需要同時處理壓克力招牌和金屬配件，但又不想買兩台機器。</p>
+        <p>鴻瑋光電的 <strong>HS-1530 CO₂ 金屬非金屬兩用機</strong>就是為這個需求設計的。採用特殊配置的高功率 CO₂ 雷射源，搭配輔助氣體系統，可以在同一台機器上切割壓克力、木材，也能切割薄金屬板（如碳鋼 1-3mm、不鏽鋼 0.5-2mm）。</p>
+
+        <div class="callout"><strong>注意：</strong> 兩用機的金屬切割效率不及純光纖雷射切割機，如果你的主要業務是金屬切割，還是建議直接選擇光纖雷射切割機。兩用機最適合「非金屬為主、偶爾切薄金屬」的應用場景。</div>
+
+        <h2>快速選機決策指南</h2>
+        <div class="decision-grid">
+          <div class="decision-box decision-co2">
+            <div class="decision-title">選 CO₂ 雷射切割機，如果你…</div>
+            <div class="decision-list">
+              ✅ 主要切割壓克力<br>
+              ✅ 加工木材、皮革、布料<br>
+              ✅ 廣告招牌、禮品文創業<br>
+              ✅ 預算相對有限<br>
+              ✅ 不需要切割金屬
+            </div>
+          </div>
+          <div class="decision-box decision-fiber">
+            <div class="decision-title">選光纖雷射切割機，如果你…</div>
+            <div class="decision-list">
+              ✅ 主要切割碳鋼、不鏽鋼<br>
+              ✅ 五金鈑金、汽車零件業<br>
+              ✅ 重視電耗成本<br>
+              ✅ 需要高精度金屬切割<br>
+              ✅ 規劃長期大量金屬加工
+            </div>
+          </div>
+        </div>
+
+        <div class="callout"><strong>鴻瑋建議：</strong> 不確定哪種適合你的工廠？帶著你的材料樣品到桃園廠，我們可以同時示範兩種機型的切割效果，讓你親眼比較後再做決定，完全免費，不需要任何承諾。</div>
+
+      </div>
+
+      <!-- CTA -->
+      <div style="background:linear-gradient(135deg,#dc3c28,#c8281a);border-radius:14px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
+        <div>
+          <h3 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:5px;">CO₂ 還是光纖？讓鴻瑋幫你做決定</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,.75);">免費選機諮詢 · 到廠試機 · 14年經驗 · 全台到府安裝</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="https://line.me/ti/p/8VNv8wLvRM" target="_blank" style="background:#06C755;color:#fff;padding:12px 22px;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;display:flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.418 14.024 24 12.304 24 10.304z"/></svg>LINE 免費諮詢</a>
+          <a href="tel:0935249966" style="background:#fff;color:#dc3c28;padding:12px 22px;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;">0935-249-966</a>
+          <a href="contact.html" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:12px 22px;text-decoration:none;font-size:14px;border-radius:6px;">索取報價單</a>
+        </div>
+      </div>
+
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#ff5c3a;letter-spacing:4px;margin-bottom:16px;">// 相關文章</div>
+      <div class="rel-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <a href="blog-5.html" class="rel-card">
+          <div style="font-size:10px;color:#ff5c3a;font-family:monospace;margin-bottom:6px;">雷射切割機</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:4px;">壓克力雷射切割機選購指南</div>
+          <div style="font-size:12px;color:#7a90b0;">功率、速度、邊緣品質完整說明</div>
+        </a>
+        <a href="blog-8.html" class="rel-card">
+          <div style="font-size:10px;color:#ff5c3a;font-family:monospace;margin-bottom:6px;">雷射切割機</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:4px;">金屬雷射切割機選購指南</div>
+          <div style="font-size:12px;color:#7a90b0;">不鏽鋼、碳鋼、鋁材切割厚度比較</div>
+        </a>
+        <a href="blog-7.html" class="rel-card">
+          <div style="font-size:10px;color:#ff5c3a;font-family:monospace;margin-bottom:6px;">選購指南</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:4px;">雷射切割機價格怎麼看？</div>
+          <div style="font-size:12px;color:#7a90b0;">2026 年台灣市場行情分析</div>
+        </a>
+        <a href="product-detail?id=hs-1530" class="rel-card">
+          <div style="font-size:10px;color:#ff5c3a;font-family:monospace;margin-bottom:6px;">查看設備</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:4px;">HS-1530 CO₂ 金屬非金屬兩用機</div>
+          <div style="font-size:12px;color:#7a90b0;">查看完整規格與詢問報價</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer style="background:#030912;border-top:1px solid rgba(255,255,255,.06);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+  <div style="font-size:12px;color:#1a3a5a;font-family:monospace;">© 2026 鴻瑋光電有限公司</div>
+  <div style="font-size:12px;color:#1a3a5a;font-family:monospace;">Design by <a href="https://peggyportfolio.netlify.app/" target="_blank" style="color:#ff5c3a;text-decoration:none;">Peggy Lu · 曜呂數位</a></div>
+</footer>
+<script>function hwM(){var mo=document.getElementById('hw-mo');var open=mo.style.display==='flex';mo.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';}</script>
+</body>
+</html>
