@@ -207,18 +207,29 @@ function showDetail(id) {
   // Related
   document.getElementById('d-related').innerHTML = (b.related||[]).slice(0,3).map(function(rid){
     var r=D[rid]; if(!r) return '';
-    return '<div class="rel-card" onclick="nav(''+rid+'')">'
+    return '<div class="rel-card" onclick="nav(\''+rid+'\'')">'
       +'<div style="font-size:9px;color:#ff5c3a;font-family:monospace;margin-bottom:4px;">'+r.cat+'</div>'
       +'<div style="font-size:12px;font-weight:600;color:#e8eef8;line-height:1.4;">'+r.title+'</div></div>';
   }).join('');
+  // Add click handlers via delegation
+  var relEl = document.getElementById('d-related');
+  if (relEl) relEl.onclick = function(e) {
+    var c = e.target.closest('.rel-card');
+    if (c && c.dataset.rid) nav(c.dataset.rid);
+  };
 
   // Popular (different from related)
   document.getElementById('d-popular').innerHTML = Object.keys(D).filter(function(k){return k!==id && !(b.related||[]).includes(k);}).slice(0,3).map(function(pid){
     var r=D[pid];
-    return '<div class="rel-card" onclick="nav(''+pid+'')">'
+    return '<div class="rel-card" onclick="nav(\''+pid+'\'')">'
       +'<div style="font-size:9px;color:#ff5c3a;font-family:monospace;margin-bottom:4px;">'+r.cat+'</div>'
       +'<div style="font-size:12px;font-weight:600;color:#e8eef8;line-height:1.4;">'+r.title+'</div></div>';
   }).join('');
+  var popEl = document.getElementById('d-popular');
+  if (popEl) popEl.onclick = function(e) {
+    var c = e.target.closest('.rel-card');
+    if (c && c.dataset.rid) nav(c.dataset.rid);
+  };
 
   document.getElementById('view-list').style.display = 'none';
   document.getElementById('view-detail').style.display = 'block';
@@ -230,7 +241,7 @@ function renderList(cat) {
     var b = D[id];
     if (cat !== '全部' && b.cat !== cat) return;
     var tags = b.tags.slice(0,3).map(function(t){return '<span class="pill">'+t+'</span>';}).join('');
-    html += '<div class="blog-card" onclick="nav(''+id+'')"> '
+    html += '<div class="blog-card" data-id="'+id+'"> '
       +'<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">'
       +'<span style="font-size:10px;color:#ff5c3a;background:rgba(220,60,40,.1);border:1px solid rgba(220,60,40,.25);padding:2px 8px;border-radius:3px;font-family:monospace;">'+b.cat+'</span>'
       +'<span style="font-size:11px;color:#3a5070;font-family:monospace;">'+b.date+'</span></div>'
@@ -238,12 +249,17 @@ function renderList(cat) {
       +'<p style="font-size:13px;color:#7a90b0;line-height:1.75;margin-bottom:10px;">'+b.desc+'</p>'
       +'<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">'
       +'<div>'+tags+'</div>'
-      +'<div style="display:flex;align-items:center;gap:5px;color:#ff5c3a;font-size:13px;font-weight:700;flex-shrink:0;">閱讀更多 <svg width="14" height="14" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8 4l4.5 3.5L8 11"/></svg></div>'
+      +'<div style="display:flex;align-items:center;gap:5px;color:#ff5c3a;font-size:13px;font-weight:700;flex-shrink:0;">閱讀更多 →</div>'
       +'</div></div>';
   });
-  document.getElementById('list-grid').innerHTML = html;
+  var grid = document.getElementById('list-grid');
+  grid.innerHTML = html;
+  // Use event delegation - attach ONE listener to the grid
+  grid.onclick = function(e) {
+    var card = e.target.closest('.blog-card');
+    if (card) nav(card.dataset.id);
+  };
 }
-
 function buildFilters() {
   var el = document.getElementById('filters');
   el.innerHTML = CATS.map(function(c,i) {
